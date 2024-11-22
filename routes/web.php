@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+route::post('/users', [UserController::class, 'store'])->name('users.store');
+route::get('/users/create', [UserController::class, 'create'])->name('users.create');
 route::get('/users', [UserController::class, 'index'])->name('users.index');
 
 Route::get('/', function () {
