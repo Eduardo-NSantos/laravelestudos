@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+@extends('admin.layouts.app')
+
+@section('title', 'listagem')
+
+@section('content')
     <h1>Usuáios</h1>
+
+    @if(session()->has('success'))
+        {{ session('success') }}
+    @endif
 
     <a href="{{ route('users.create') }}">Novo</a>
 
@@ -34,5 +35,4 @@
     </table>
 
     {{ $users->links() }}
-</body>
-</html>
+@endsection
