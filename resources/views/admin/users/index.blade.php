@@ -9,6 +9,10 @@
         {{ session('success') }}
     @endif
 
+    @if(session()->has('message'))
+        {{ session('message') }}
+    @endif
+
     <a href="{{ route('users.create') }}">Novo</a>
 
     <table>
@@ -24,7 +28,7 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>-</td>
+                    <td><a href="{{ route('users.edit', $user->id) }}">Edit</a></td>
                 </tr>
             @empty
                 <tr>
