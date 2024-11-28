@@ -5,13 +5,7 @@
 @section('content')
     <h1>Usuáios</h1>
 
-    @if(session()->has('success'))
-        {{ session('success') }}
-    @endif
-
-    @if(session()->has('message'))
-        {{ session('message') }}
-    @endif
+    <x-alert/>
 
     <a href="{{ route('users.create') }}">Novo</a>
 

@@ -5,9 +5,7 @@
 @section('content')
     <h1>Editar o usuário {{ $user->name }}</h1>
 
-    @if(session()->has('message'))
-        {{ session('message') }}
-    @endif
+    <x-alert/>
 
     <form action="{{ route('users.update', $user->id) }}" method="post">
         @csrf()
