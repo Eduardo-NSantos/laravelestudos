@@ -20,6 +20,6 @@ class CheckIfIsAdmin
             return $next($request);
         }
 
-        return redirect()->route('home');
+        return back()->with('error', 'Você não tem permissão para realizar essa ação');
     }
 }
