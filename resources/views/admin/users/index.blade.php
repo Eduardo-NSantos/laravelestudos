@@ -3,7 +3,7 @@
 @section('title', 'listagem')
 
 @section('content')
-    <h1>Usuáios</h1>
+    <h1>Usuários</h1>
 
     <x-alert/>
 
